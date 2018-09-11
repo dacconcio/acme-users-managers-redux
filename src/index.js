@@ -63,7 +63,7 @@ class App extends React.Component {
               exact
               path="/users"
               render={() => (
-                <Users deleteFunc={deleteUser} users={state.users} />
+                <Users deleteFunc={deleteUser} users={users} />
               )}
             />
 
