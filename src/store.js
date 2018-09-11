@@ -3,7 +3,7 @@ import { createStore } from 'redux';
 const ADD_USER = 'ADD_USER';
 const ADD_USERS = 'ADD_USERS';
 const DELETE_USER = 'DELETE_USER';
-const UPDATE_USER = 'UPATE_USER';
+const UPDATE_USER = 'UPDATE_USER';
 
 const addUser = user => {
   return {

@@ -1,6 +1,5 @@
 const User = require('./db/models.js')
 
-
 const express = require('express');
 const app = new express();
 const path = require('path');
