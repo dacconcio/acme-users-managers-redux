@@ -50,11 +50,8 @@ class App extends React.Component {
   }
 
   render() {
-
-
-  
-
-    console.log(this.state);
+    const { deleteUser, createUser, updateUser } = this;
+    const { users } = this.state;
 
     return (
       <HashRouter>
@@ -66,7 +63,7 @@ class App extends React.Component {
               exact
               path="/users"
               render={() => (
-                <Users deleteFunc={this.deleteUser} users={this.state.users} />
+                <Users deleteFunc={deleteUser} users={state.users} />
               )}
             />
 
@@ -76,10 +73,10 @@ class App extends React.Component {
               render={({ location }) => (
                 <CreateUpdate
                   location={location}
-                  users={this.state.users}
-                  deleteFunc={this.deleteUser}
-                  createFunc={this.createUser}
-                  updateFunc={this.updateUser}
+                  users={users}
+                  deleteFunc={deleteUser}
+                  createFunc={createUser}
+                  updateFunc={updateUser}
                 />
               )}
             />
@@ -88,9 +85,7 @@ class App extends React.Component {
           <Route
             exact
             path="/managers"
-            render={() => (
-              <Managers deleteFunc={this.deleteUser} users={this.state.users} />
-            )}
+            render={() => <Managers deleteFunc={deleteUser} users={users} />}
           />
 
           <Route
@@ -98,10 +93,10 @@ class App extends React.Component {
             render={({ location }) => (
               <CreateUpdate
                 location={location}
-                users={this.state.users}
-                deleteFunc={this.deleteUser}
-                createFunc={this.createUser}
-                updateFunc={this.updateUser}
+                users={users}
+                deleteFunc={deleteUser}
+                createFunc={createUser}
+                updateFunc={updateUser}
               />
             )}
           />
