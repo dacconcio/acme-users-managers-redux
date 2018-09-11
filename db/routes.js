@@ -1,4 +1,4 @@
-const User = require('./src/Models.js');
+const User = require('./Models.js');
 const Express = require('express');
 const app = new Express();
 const path = require('path');
